@@ -17,12 +17,13 @@ jobs:
       matrix:
         node:
           - 14
-          - 16
-          - 18
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: '${{ matrix.node }}'
+        env:
+          BASE_URL: ${{ secrets.SECRET1 }}
+          KEY : ${{ secrets.SECRET2 }}
       - uses: actions/checkout@v2
       - name: 'Cache node_modules'
         uses: actions/cache@v2
@@ -32,6 +33,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
-        run: npm install
+        run: | 
+          yarn add mocha
+          yarn add axios
+          yarn add dotenv
+          yarn add chai
+          yarn add mochawesome
+          touch .env
+          echo BASE_URL="${{ secrets.SECRET1 }}" >> .env
+          echo KEY="${{ secrets.SECRET2 }}" >> .env
       - name: Run All Node.js Tests
-        run: npm run test
+        run: yarn run mocha:test

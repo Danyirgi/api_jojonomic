@@ -1,4 +1,4 @@
-.env
 .*html
 node_modules
 reports
+.env
