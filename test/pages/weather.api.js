@@ -10,8 +10,8 @@ const postal_code = 28546;
 const hours = 3;
 
 const weatherAPI = {
-    current_weather: (data) => BaseAPI.get(`/current?lat=${lat}&lon=${lon}&key=${key}`, data),
-    forecast_weather: (data) => BaseAPI.get(`/forecast/hourly?postal_code=${postal_code}&hours=${hours}&key=${key}`, data)
+    current_weather: () => BaseAPI.get(`/current?lat=${lat}&lon=${lon}&key=${key}`),
+    forecast_weather: () => BaseAPI.get(`/forecast/hourly?postal_code=${postal_code}&hours=${hours}&key=${key}`)
 }
 
 export default weatherAPI;

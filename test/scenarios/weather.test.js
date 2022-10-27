@@ -1,11 +1,12 @@
 import { assert } from "chai";
 import weatherAPI from "../pages/weather.api";
-import * as data from "../data/weather.data";
+// import * as data from "../data/weather.data";
 
 describe('Test weather', () => {
     it('Should get weather from lat and lon', async() => {
-        const response = await weatherAPI.current_weather(data.PARAMS_WEATHER);
+        const response = await weatherAPI.current_weather();
         let jsonData = response.data
+        console.log(jsonData)
         console.log(jsonData.status);
         console.log(jsonData.data[0].state_code);
 
@@ -16,7 +17,7 @@ describe('Test weather', () => {
 
 describe('Test forecast', () => {
     it('Should get forecast from postal code and hours', async() => {
-        const response = await weatherAPI.forecast_weather(data.PARAMS_FORECAST);
+        const response = await weatherAPI.forecast_weather();
         let jsonData = response.data
         console.log(jsonData.status);
         console.log(jsonData.data[0].timestamp_utc);
