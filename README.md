@@ -14,11 +14,9 @@ API Automation using mocha and chai.
    yarn add
    ```
 5. Add file `.env` and Enter your API Token
-   ```json
-   {
+   ```
     "KEY": "your_own_token_from_weatherbitio",
-    "BASE_URL"= "ttps://api.weatherbit.io/v2.0/",
-    }
+    "BASE_URL"= "https://api.weatherbit.io/v2.0/",
    ```
 
 ### How to run
