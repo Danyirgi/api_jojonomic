@@ -1,8 +1,6 @@
 ### GETTING STARTED
 API Automation using mocha and chai.
 
-API Automation Test File : tests/scenarios/weather.test.js
-
 ### Installation
 1. Register to get the API token key -  [https://www.weatherbit.io/account/create](https://www.weatherbit.io/account/create)
 2. Clone the repo
