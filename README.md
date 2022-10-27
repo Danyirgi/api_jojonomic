@@ -13,11 +13,11 @@ API Automation using mocha and chai.
    ```sh
    yarn add
    ```
-5. Add file `.env` and Enter your API Token, BASE_URL = `https://api.weatherbit.io/v2.0/`
+5. Add file `.env` and Enter your API Token
    ```json
    {
     "KEY": "your_own_token_from_weatherbitio",
-    "BASE_URL": "sample",
+    "BASE_URL"= "ttps://api.weatherbit.io/v2.0/",
     }
    ```
 
