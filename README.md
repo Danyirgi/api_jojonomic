@@ -1,3 +1,8 @@
+### DESCRIPTION
+   This repo contains automation api for weatherbitio
+   first test to test current weather api
+   second test to test forecast weather api
+
 ### GETTING STARTED
 API Automation using mocha and chai.
 
