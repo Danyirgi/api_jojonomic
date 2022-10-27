@@ -9,9 +9,9 @@ const key = process.env.KEY
 const postal_code = 28546;
 const hours = 3;
 
-const weatherbitAPI = {
-    get_current_weather: (data) => BaseAPI.get(`/current?lat=${lat}&lon=${lon}&key=${key}`, data),
-    get_forecast_weather: (data) => BaseAPI.get(`/forecast/hourly?postal_code=${postal_code}&hours=${hours}&key=${key}`, data)
+const weatherAPI = {
+    current_weather: (data) => BaseAPI.get(`/current?lat=${lat}&lon=${lon}&key=${key}`, data),
+    forecast_weather: (data) => BaseAPI.get(`/forecast/hourly?postal_code=${postal_code}&hours=${hours}&key=${key}`, data)
 }
 
-export default weatherbitAPI;
+export default weatherAPI;
